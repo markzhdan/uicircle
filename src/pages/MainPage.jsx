@@ -1,10 +1,15 @@
 import "./MainPage.css";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   return (
-    <div className="MainPage">
-      <h1>MainPage</h1>
-    </div>
+    <main className="MainPage">
+      <h1>Put the main page here</h1>
+
+      <Link to="/messages">
+        <button type="button">To Messages</button>
+      </Link>
+    </main>
   );
 }
 
