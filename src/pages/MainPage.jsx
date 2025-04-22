@@ -10,7 +10,7 @@ function MainPage() {
   return (
     <div class="MainPage">
       <div class="intro_text">Immerse into the pixelated flames of UIC, and embark on a path to sealing your future success</div>
-      <button class="intro_button"> click here </button>
+      <button class="intro_button"><p class="button_text">Create Account</p> </button>
     </div>
     
   );
