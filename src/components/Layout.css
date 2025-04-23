@@ -1,0 +1,55 @@
+/* https://codepen.io/1bbnuuu/pen/KwKqeBq */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+.layout-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 20px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.layout-container .iphone {
+  position: relative;
+  width: 480px;
+  height: 900px;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 12px solid black;
+  text-align: center;
+}
+
+.layout-container .front {
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.layout-container .top-bar {
+  top: -4px;
+  width: 50%;
+  height: 24px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.layout-container .bottom-bar {
+  bottom: 4px;
+  width: 40%;
+  height: 6px;
+  border-radius: 9999px;
+}
+
+.layout-container .content {
+  /* height: calc(100% - 50px); */
+  height: 100%;
+  overflow-y: auto;
+}

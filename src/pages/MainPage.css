@@ -1,33 +1,24 @@
-/* .MainPage {
-  /* background-color: green; */
+.MainPage {
+  height: 100%;
+  background-image: url("../assets/city_image_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  padding-top: 20px;
   
-/*} */
-  
-.intro_button {
-  /* background-color: green; */
-  height: 101px;
-  width: 260px;
-  background-color: #D81159;
-  border-radius: 10px;
-  border-color: #6C0027;
-  border-width: 10px;
-  margin-left: 60px;
-  margin-top: 10px;
+}
+
+.main_components {
+  margin-top: 100px;
 }
 
 .intro_text{
-  margin-left: 10px;
+  margin-left: 50px;
   width: 350px;
   text-align: center;
   font-size: 25px;
   font-weight: bolder;
-  color: black;
-  /* border-color: black;
-  border-width: 20px; */
-}
+  color: #ffbc42;
+  text-shadow: 3px 3px 0 #000;
+} 
 
-.button_text{
-  font-size: 25px;
-  font-weight: bolder;
-  color: black;
-}

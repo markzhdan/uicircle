@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./assets/city_image_bg.jpg");
+  /* background-image: url("./assets/city_image_bg.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

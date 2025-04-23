@@ -1,8 +1,8 @@
-import "./Messages.css";
+import "./Profile.css";
 
-function Messages() {
+function Profile() {
   return (
-    <div className="Messages">
+    <div className="Profile">
       <h1>Messages!</h1>
 
       <img src="" alt="" />
@@ -11,4 +11,4 @@ function Messages() {
   );
 }
 
-export default Messages;
+export default Profile;

@@ -21,7 +21,7 @@
 import "./App.css";
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
-import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -33,11 +33,12 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/messages" element={<Messages />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Layout>
       </div>
     </Router>
+
   );
 }
 
