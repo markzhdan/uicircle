@@ -8,7 +8,7 @@
   height: 101px;
   width: 260px;
   background-color: #D81159;
-  border-radius: 10px;
+  border-radius: 25px;
   border-color: #6C0027;
   border-style: solid;
   border-width: 10px;
@@ -20,6 +20,13 @@
   font-size: 28px;
   font-weight: bolder;
   color: white;
+}
+
+.img{
+  margin-bottom: 0%;
+}
+.title {
+  margin-top: 0%;
 }
 
   
