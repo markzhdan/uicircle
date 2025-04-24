@@ -1,12 +1,16 @@
-import "./Layout.css";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import './Layout.css';
 
-function Layout({ children }) {
+function Layout() {
   return (
-    <div className="layout-container">
-      <div className="iphone">
-        <div className="front top-bar"></div>
-        <div className="front bottom-bar"></div>
-        <div className="content">{children}</div>
+    <div className="container">
+      <div className="iphone-container">
+        <div className="dynamic-island"></div>
+        <div className="content">
+          <Outlet />
+        </div>
+        <div className="bottom-bar"></div>
       </div>
     </div>
   );
