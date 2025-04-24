@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   background-image: url("./assets/city_image_bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,4 +15,6 @@
   border-radius: 20px;
   border-color: black;
   border-width: 10px;
+=======
+>>>>>>> e4fa58de490d4fdd4a7c50044b489a9891ec6122
 }
