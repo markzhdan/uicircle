@@ -1,20 +1,17 @@
 .App {
-  height: 100vh;
+  height: 650px; /* or 100vh if you want full screen */
+  width: 500px;
+  margin-left: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-<<<<<<< HEAD
+  overflow-y: auto; /* <--- enables vertical scrolling */
+
   background-image: url("./assets/city_image_bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 650px;
-  width: 500px;
-  margin-left: 400px;
+
   border-radius: 20px;
-  border-color: black;
-  border-width: 10px;
-=======
->>>>>>> e4fa58de490d4fdd4a7c50044b489a9891ec6122
+  border: 10px solid black;
 }
