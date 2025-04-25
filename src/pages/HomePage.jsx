@@ -46,6 +46,7 @@ const clubs = [
 const HomePage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [welcomeMessage, setWelcomeMessage] = useState("");
+    const [rejectMessage, setRejectMessage] = useState("");
 
     const handleNextClub = () => {
         setCurrentIndex((prevIndex) =>
@@ -55,6 +56,10 @@ const HomePage = () => {
     const handleAccept = () => {
         setWelcomeMessage(`Welcome to ${clubs[currentIndex].name}!`);
         setTimeout(() => setWelcomeMessage(""), 3000);
+    };
+    const handleReject = () => {
+        setRejectMessage(`No worries!! explore more clubs`);
+        setTimeout(() => setRejectMessage(""), 3000);
     };
 
   return (
@@ -79,7 +84,7 @@ const HomePage = () => {
 
             <ClubCard
                 {...clubs[currentIndex]}
-                onReject={() => console.log('Rejected')}
+                onReject={handleReject}
                 onAccept={handleAccept}
             />
 
@@ -91,7 +96,8 @@ const HomePage = () => {
                 </button>
             )}
         </div>
-        {welcomeMessage && <div className="welcome-toast">{welcomeMessage}</div>}
+        {rejectMessage && <div className="reject-message">{rejectMessage}</div>}
+        {welcomeMessage && <div className="welcome-message">{welcomeMessage}</div>}
         <nav className="bottom-nav">
             <NavLink to="/fav-clubs" className="nav-item">
                 <img src={favClubsIcon} alt="Fav Clubs" />
