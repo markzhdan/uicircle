@@ -1,8 +1,8 @@
 .Profile {
-    background-color: var(--yellow);
-    height: 100%;
-    padding-top: 20px;
-  }
+  background-color: var(--yellow);
+  height: 100%;
+  padding-top: 20px;
+}
 
 .intro_button {
   height: 101px;

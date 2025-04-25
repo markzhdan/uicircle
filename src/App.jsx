@@ -22,6 +22,7 @@ import "./App.css";
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
+import HomePage from "./pages/HomePage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -34,6 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/home" element={<HomePage />} />
           </Routes>
         </Layout>
       </div>
