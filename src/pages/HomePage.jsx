@@ -3,6 +3,10 @@ import "./HomePage.css"
 import PMRIG_icon from "../assets/PMRIG_icon.png";
 import PMRIG_event1 from "../assets/PMRIG_event1.png";
 import PMRIG_event2 from "../assets/PMRIG_event2.png";
+import favClubsIcon from '../assets/fav-clubs.png';
+import homeIcon from '../assets/home.png';
+import calendarIcon from '../assets/calendar.png';
+import messagesIcon from '../assets/messages.png';
 import { useParams, useNavigate, NavLink } from 'react-router-dom';
 
 const HomePage = () => {
@@ -44,7 +48,7 @@ const HomePage = () => {
             </div>
 
         </div>
-        {/* <nav className="bottom-nav">
+        <nav className="bottom-nav">
             <div className="rectangle-3" />
             <NavLink to="/fav-clubs" className={({ isActive }) => isActive ? 'nav-button active' : 'nav-button'}>
                 <img src={favClubsIcon} alt="Fav Clubs" />
@@ -62,7 +66,7 @@ const HomePage = () => {
                 <img src={messagesIcon} alt="Messages" />
                 <span>Messages</span>
             </NavLink>
-        </nav> */}
+        </nav>
     </main>
 
 

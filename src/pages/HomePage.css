@@ -7,7 +7,7 @@
   padding-top: 40px; /* moves everything down a bit */
   gap: 30px;
   position: relative;
-  overflow: visible; /* important to allow buttons outside bounds */
+  overflow-y: hidden; /* important to allow buttons outside bounds */
 }
 
 .SearchBar{
@@ -116,9 +116,10 @@
   color: black;
   padding: 10px 10px;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: bolder;
   white-space: nowrap;
   margin-bottom: 5%;
+  font-size: 15px;
 }
 
 .match{

@@ -23,7 +23,7 @@ import React from 'react';
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
-import HomePage from "./pages/homePage";
+import HomePage from "./pages/HomePage";
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
