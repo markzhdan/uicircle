@@ -1,274 +1,400 @@
 .club-detail-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .top-bar {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rectangle-17 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(112.66, 119, 98.17, 0.13);
+    border-radius: 10px;
+    border: 1px solid black;
+    z-index: 1;
+  }
+  
+  .favclubs-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-right: 20px;
+    color: white;
+    font-size: 75px;
+    font-family: 'Kadwa', serif;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    z-index: 2;
+  }
+  
+  .club-detail-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 190px;
+    margin-bottom: 190px;
+    height: calc(100vh - 360px);
+    overflow: hidden;
+  }
+  
+  .club-detail-description {
+    font-family: 'Kadwa', serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 0px 0; 
+    padding: 0 0px;
+  }
+  
+  .bottom-nav {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .rectangle-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #218380;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.3s, border 0.3s;
+    z-index: 2;
+  }
+  
+  .nav-button img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 0px;
+  }
+  
+  .nav-button span {
+    color: white;
+    font-size: 25px;
+    font-family: 'Kadwa', serif;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .nav-button.active {
+    opacity: 1;
+    border-bottom: 3px solid #FFBC42;
+  }
+  
+  /* don't change this */
+  .pink-container {
+    position: absolute;
+    width: 85%;  
+    height: 100vh; 
+    top: 50%;    
+    left: 50%;   
+    transform: translate(-50%, -50%); 
+    background: #EE286F;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin: 0 auto; 
+    padding: 20px; 
+  }
+  
+  .club-header {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .club-title {
+    color: white;
+    font-family: 'Kadwa', serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .club-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+  
+  .separator-line {
+    position: absolute;
+    top: 120px;
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 15px;
+  }
+
+  .separator-line2 {
+    position: absolute;
+    top: 325px;
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 0px;
+  }
+  
+  .description-container {
+    position: absolute;
+    top: 160px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Kadwa', serif;
+    font-weight: 200;
+    line-height: 50px;
+  }
+  
+  .members-scroll-container {
+    position: absolute;
+    top: 710px;
+    width: 90%;
+    max-height: 255px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.85);  
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);  
+  }
+  
+  .members-scroll-container::-webkit-scrollbar {
+    width: 10px;  
+  }
+  
+  .members-scroll-container::-webkit-scrollbar-track {
+    background: #EEDDCCDD;  
+    border-radius: 5px;
+  }
+  
+  .members-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(238, 40, 111, 0.6);  
+    border-radius: 5px;
+    border: 2px solid #EEDDCCDD; 
+  }
+  
+  .members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  
+  }
+  
+  .member-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;  
+    background: rgba(238, 221, 204, 0.8);
+    border-radius: 15px;  
+    gap: 15px;  /* More space between elements */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-left: 5px solid #EE286F;  /* Thicker accent border */
+  }
+  
+  .member-item:hover {
+    transform: translateX(5px);
+    background: rgba(238, 221, 204, 0.95);
+  }
+  
+  .member-icon {
+    width: 35px;  /* Much larger icon */
+    height: 45px;
+    object-fit: contain;
+  }
+  
+  .member-name {
+    flex: 1;
+    font-family: 'Kadwa', serif;
+    font-size: 27px;  /* Larger text */
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+  }
+  
+  .board-member {
+    color: #EE286F;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .board-member::after {
+    content: "★";
+    margin-left: 10px;
+    font-size: 18px;  /* Larger star */
+  }
+  
+  .message-icon {
+    width: 40px;  /* Much larger message icon */
+    height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    opacity: 0.8;
+  }
+  
+  .message-icon:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+.up-coming-events {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    text-align: center;
+    color: #F6E2D4;
+    font-size: 40px;
+    font-family: 'Kadwa', serif;
+    font-weight: 700;
+    line-height: 30px;
+    word-wrap: break-word;
 }
 
-.top-bar {
+.events-scroll-container {
   position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 390px;
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
-.rectangle-17 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(112.66, 119, 98.17, 0.13);
-  border-radius: 10px;
-  border: 1px solid black;
-  z-index: 1;
+.events-scroll-container::-webkit-scrollbar {
+  height: 15px;
 }
 
-.favclubs-title {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding-right: 20px;
-  color: white;
-  font-size: 75px;
-  font-family: 'Kadwa', serif;
-  font-weight: 700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 0;
-  z-index: 2;
+.events-scroll-container::-webkit-scrollbar-track {
+  background: #EEDDCCBB;
+  border-radius: 3px;
 }
 
-.club-detail-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 190px;
-  margin-bottom: 190px;
-  height: calc(100vh - 360px);
-  overflow: hidden;
+.events-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.919);
+  border-radius: 3px;
 }
 
-.club-detail-description {
-  font-family: 'Kadwa', serif;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  margin: 0px 0; 
-  padding: 0 0px;
-}
-
-.bottom-nav {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.rectangle-3 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #218380;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-.nav-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 25%;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s, border 0.3s;
-  z-index: 2;
-}
-
-.nav-button img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin-bottom: 0px;
-}
-
-.nav-button span {
-  color: white;
-  font-size: 25px;
-  font-family: 'Kadwa', serif;
-  font-weight: 400;
-  text-align: center;
-}
-
-.nav-button.active {
-  opacity: 1;
-  border-bottom: 3px solid #FFBC42;
-}
-
-/* don't change this */
-.pink-container {
-  position: absolute;
-  width: 85%;  
-  height: 100vh; 
-  top: 50%;    
-  left: 50%;   
-  transform: translate(-50%, -50%); 
-  background: #EE286F;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  margin: 0 auto; 
-  padding: 20px; 
-}
-
-.club-header {
-  position: absolute;
-  top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.events-list {
+  display: inline-flex;
   gap: 15px;
-  width: 100%;
+  padding: 0 5px;
 }
 
-.club-title {
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 60px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.club-icon {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
-.separator-line {
-  position: absolute;
-  top: 120px;
-  width: 90%;
-  height: 2px;
-  background-color: white;
-  margin: 15px 0;
-}
-
-.description-container {
-  position: absolute;
-  top: 160px;
-  width: 80%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-family: 'Kadwa', serif;
-  font-weight: 200;
-  line-height: 50px;
-}
-
-.events-section {
-  width: 100%;
-  margin: 15px 0;
-}
-
-.events-title {
-  font-family: 'Kadwa', serif;
-  font-size: 24px;
-  color: white;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.event-pills-container {
+.event-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 280px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  white-space: normal;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: center;
 }
 
-.event-pill {
-  background: rgba(255, 255, 255, 0.2);
+.event-date {
+  background: #FFBC42;
+  color: #000000;
+  padding: 8px 16px;
   border-radius: 20px;
-  padding: 8px 15px;
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 16px;
-  width: 280px;
-  text-align: center;
-}
-
-
-.members-container {
-  width: 90%;
-  max-height: 120px;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 15px;
-}
-
-.members-container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.members-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.members-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-.members-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.member-item {
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 16px;
-  padding: 5px 0;
-}
-
-.board-member {
+  font-size: 23px;
   font-weight: bold;
-  color: #FFBC42;
+  margin-bottom: 8px;
 }
 
-.back-icon {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  background: #218380;
-  border-radius: 50%;
-  padding: 15px;
-  transition: transform 0.2s;
-  z-index: 3;
-}
+.event-name {
+    color: #000000;
+    font-family: 'Kadwa', serif;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.3; 
+  }
+  
+  .event-time {
+    color: #000000;
+    font-size: 25px;
+    font-family: 'Kadwa', serif;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.1; 
+  }
+  
+  .event-location {
+    color: #000000;
+    font-size: 25px;
+    font-family: 'Kadwa', serif;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    line-height: 1.1; 
+  }
 
-.back-icon:hover {
-  transform: scale(1.1);
-}
+  .back-icon {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #218380;
+    border-radius: 50%;
+    padding: 15px;
+    transition: transform 0.2s;
+    z-index: 3;
+  }
+  
+  .back-icon:hover {
+    transform: scale(1.1);
+  }
