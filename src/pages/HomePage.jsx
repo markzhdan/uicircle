@@ -45,11 +45,16 @@ const clubs = [
 
 const HomePage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [welcomeMessage, setWelcomeMessage] = useState("");
 
     const handleNextClub = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex < clubs.length - 1 ? prevIndex + 1 : 0 
         );
+    };
+    const handleAccept = () => {
+        setWelcomeMessage(`Welcome to ${clubs[currentIndex].name}!`);
+        setTimeout(() => setWelcomeMessage(""), 3000);
     };
 
   return (
@@ -75,7 +80,7 @@ const HomePage = () => {
             <ClubCard
                 {...clubs[currentIndex]}
                 onReject={() => console.log('Rejected')}
-                onAccept={() => console.log('Accepted')}
+                onAccept={handleAccept}
             />
 
             {currentIndex < clubs.length - 1 && (
@@ -86,7 +91,7 @@ const HomePage = () => {
                 </button>
             )}
         </div>
-
+        {welcomeMessage && <div className="welcome-toast">{welcomeMessage}</div>}
         <nav className="bottom-nav">
             <NavLink to="/fav-clubs" className="nav-item">
                 <img src={favClubsIcon} alt="Fav Clubs" />
