@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Inter:wght@400&display=swap');
+
 :root {
-  /* To use: background-color: var(--aqua) */
+
   --aqua: #218380;
   --aqua-dark: #1c4544;
   --pink: #d81159;
@@ -11,10 +13,10 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", 'Kadwa', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -27,3 +29,4 @@ code {
   padding: 0px;
   margin: 0px;
 }
+

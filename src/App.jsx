@@ -24,6 +24,9 @@ import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
 import HomePage from "./pages/HomePage";
+import Messages from "./pages/Messages";
+
+
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -41,6 +44,8 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/home" element={<HomePage />} />
+            <Route path="/fav-clubs" element={<FavClubs />} />
+            <Route path="/messages" element ={<Messages />} />
           </Routes>
         </Layout>
       </div>

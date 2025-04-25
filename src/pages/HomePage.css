@@ -3,11 +3,14 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers horizontally */
-  padding-top: 40px; /* moves everything down a bit */
+  align-items: center; 
+  padding-top: 20px;
   gap: 30px;
   position: relative;
-  overflow-y: hidden; /* important to allow buttons outside bounds */
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  padding-bottom: 90px;
+  box-sizing: border-box;
 }
 
 .SearchBar{
@@ -25,7 +28,7 @@
   font-size: 16px;
 }
 
-.card {
+/* .card {
   width: 360px;
   height: 514px;
   background-color: #f5428d;
@@ -37,6 +40,7 @@
   position: relative;
   border: black;
   border-style: solid;
+  margin-bottom: 100px;
 }
   
 .card-header {
@@ -120,7 +124,7 @@
   white-space: nowrap;
   margin-bottom: 5%;
   font-size: 15px;
-}
+} */
 
 .match{
   font-size: 50px;
@@ -162,3 +166,67 @@
   justify-content: center;
 }
 
+.bottom-nav {
+  position: fixed;
+  bottom: 0px;
+  width: 20px;
+  height: 70px;
+  background-color: #2a8f8f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-item.active span {
+  color: #ffe066;
+}
+
+
+.card-navigation-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  clip-path: polygon(0 0, 100% 50%, 0 100%); 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.left-arrow {
+  left: -20px; 
+  top: 42%;
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+.right-arrow {
+  right: -20px;
+  top: 42%;
+}
