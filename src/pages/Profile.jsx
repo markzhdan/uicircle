@@ -50,35 +50,43 @@ function Profile() {
 
   return (
     <div className="Profile">
-      <img className="img" src={dragon_img} height="200px" width="200px"></img>
+      <img className="dragon_img" src={dragon_img} height="200px" width="200px"></img>
       <h1 className="title">Who Are You?</h1>
       <div className="inputs">
-        <label id="name" className="label">Name:</label>
-        <input type="text" placeholder="enter your name"></input>
+        <div className="individual_label">
+          <label id="name" className="label">Name:</label>
+          <input type="text" placeholder="enter your name"></input>
+        </div>
 
-        <label id="year" className="label">Year:</label>
-        <select id="dropdown" onChange={handlerYearChange}>  
-          <option>select a year</option> 
-          {year_selection.map((year) => (
-            <option>{year.label}</option>
-          ))}
-        </select>
+        <div>
+          <label id="year" className="label">Year:</label>
+          <select id="dropdown" onChange={handlerYearChange}>  
+            <option>select a year</option> 
+            {year_selection.map((year) => (
+              <option>{year.label}</option>
+            ))}
+          </select>
+        </div>
+        <div className="individual_label">
+          <label id="major" className="label">Major:</label>
+          <select id="dropdown" onChange={handlerMajorChange}>
+            <option>select a major</option>   
+            {major_selection.map((major) => (
+              <option>{major.label}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="individual_label">
+          <label id="language" className="label">Language:</label>
+          <select id="dropdown" onChange={handlerLanguageChange}>
+            <option>select a language</option>   
+              {language_selection.map((language) => (
+                <option>{language.label}</option>
+            ))}
+          </select>
+        </div>
 
-        <label id="major" className="label">Major:</label>
-        <select id="dropdown" onChange={handlerMajorChange}>
-          <option>select a major</option>   
-          {major_selection.map((major) => (
-            <option>{major.label}</option>
-          ))}
-        </select>
-
-        <label id="language" className="label">Language:</label>
-        <select id="dropdown" onChange={handlerLanguageChange}>
-          <option>select a language</option>   
-            {language_selection.map((language) => (
-              <option>{language.label}</option>
-          ))}
-        </select>
         <br></br>
         <label id="picture">Insert a picture:</label>
         <br></br>

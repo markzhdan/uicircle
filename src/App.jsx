@@ -25,6 +25,7 @@ import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
 import HomePage from "./pages/HomePage";
 import Messages from "./pages/Messages";
+import Interests from "./pages/Interests";
 
 
 
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/interests" element={<Interests />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/fav-clubs" element={<FavClubs />} />
             <Route path="/messages" element ={<Messages />} />
