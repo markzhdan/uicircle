@@ -59,7 +59,7 @@ function FavClubs() {
           <img src={favClubsIcon} alt="Fav Clubs" />
           <span>Fav Clubs</span>
         </NavLink>
-        <NavLink to="/home" className={({ isActive }) => isActive ? 'nav-button active' : 'nav-button'}>
+        <NavLink to="/homepage" className={({ isActive }) => isActive ? 'nav-button active' : 'nav-button'}>
           <img src={homeIcon} alt="Home" />
           <span>Home</span>
         </NavLink>
