@@ -1,0 +1,29 @@
+.Interests {
+    background-color: var(--yellow);
+    height: 100%;
+    padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.profile_button {
+    height: 50px;
+    width: 120px;
+    background-color: #D81159;
+    border-radius: 25px;
+    border-color: #6C0027;
+    border-style: solid;
+    border-width: 5px;
+    justify-content: center;
+    margin-left: 250px;
+}
+
+.interest_title {
+    margin-top: 0%;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px 0 #553f15;
+    margin-bottom: 15px;
+  }
+

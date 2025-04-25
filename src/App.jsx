@@ -22,6 +22,7 @@ import "./App.css";
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
+import Interests from "./pages/Interests"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -34,6 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/interests" element={<Interests />} />
           </Routes>
         </Layout>
       </div>

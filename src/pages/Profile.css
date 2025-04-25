@@ -2,6 +2,8 @@
     background-color: var(--yellow);
     height: 100%;
     padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
 .intro_button {
@@ -25,8 +27,83 @@
 .img{
   margin-bottom: 0%;
 }
+
+#profile_image{
+  margin-left: -50px;
+  height: 200px;
+  width: 200px;
+}
 .title {
   margin-top: 0%;
+  font-weight: bolder;
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 3px 0 #553f15;
+  margin-bottom: 15px;
 }
+
+.label {
+  margin-right: 350px;
+  /* font-weight: bold; */
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:#553f15;
+}
+
+#year{
+  margin-right: 360px;
+}
+
+#major{
+  margin-left: 10px;
+}
+
+#dropdown{
+  margin-right: 40px;
+  padding: 10px;
+  width: 350px;
+  border-radius: 10px;
+  background-color: #af7f27;
+  opacity: 50%;
+  margin-bottom: 15px;
+  border: none;
+}
+
+select option :hover{
+  background-color: #2c210c;
+  color: white;  
+}
+
+#language{
+  margin-left: 20px;
+}
+
+.inputs {
+  margin-left: 20px;
+}
+
+#picture {
+  margin-left: -230px;
+  /* margin-right: 350px; */
+  /* font-weight: bold; */
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:#553f15;
+}
+
+input{
+  border: none;
+  padding: 10px;
+  width: 350px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #af7f27;
+  opacity: 50%;
+  
+}
+
+input::placeholder{
+  color:#000000
+}
+
 
   
