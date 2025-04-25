@@ -7,33 +7,21 @@ function MainPage() {
     <main className="Interests">
       <img className="img" src={dragon_img} height="200px" width="200px"></img>
       <h1 className="interest_title">What do you <br></br> like to do?</h1>
-      <div class="interest components">
-        {/* <Link to="/newpage">
-          <button className="intro_button" type="button"><p className="button_text">Create Account</p></button>
-        </Link> */}
+      <br></br>
+      <div className="interest components">
+        <div className="interests-grid"> {/* Both cards go inside here */}
+          <div className="interest-card">
+            {/* <img src={art_img} alt="art icon" className="icon" /> */}
+            <div className="interest-label">Art</div>
+          </div>
+          <div className="interest-card">
+            {/* <img src={art_img} alt="art icon" className="icon" /> */}
+            <div className="interest-label">Art</div>
+          </div>
+        </div>
       </div>
     </main>
-    
   );
 }
 
 export default MainPage;
-
-//import "./MainPage.css";
-//import { Link } from "react-router-dom";
-
-// function MainPage() {
-//   return (
-//     <main className="MainPage">
-//       <h1>Put the main page here</h1>
-//<div class="intro_text">Immerse into the pixelated flames of UIC, and embark on a path to sealing your future success</div>
-      //<button class="intro_button"><p class="button_text">Create Account</p></button>
-//       <Link to="/messages">
-//         <button type="button">To Messages</button>
-//       </Link>
-//     </main>
-//   );
-// }
-
-
-// export default MainPage;
