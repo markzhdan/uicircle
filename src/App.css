@@ -1,4 +1,4 @@
-.App {
+.App{
   min-height: 100vh;
   width: 100%;
   max-width: 500px;
@@ -6,6 +6,10 @@
   border-radius: 20px;
   background-color: white;
   overflow-y: auto;
-
+}
+div {
+  font-size: 48px;
+  color: white;
+  text-align: center;
 }
 
