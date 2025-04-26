@@ -1,0 +1,223 @@
+.Calendar {
+  background-color: var(--yellow);
+  height: 100%;
+}
+
+.Calendar .text_font {
+  text-align: center;
+  width: 100%;
+}
+
+.Calendar .card {
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Calendar .card-navigation-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.Calendar .card {
+  background: rgb(226, 81, 140);
+  border-radius: 16px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+}
+
+.Calendar .card-header {
+  text-align: center;
+  border-bottom: 1px solid white;
+  width: 70%;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.Calendar .text_font {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.Calendar .section-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 12px 0;
+  color: white;
+}
+
+.Calendar .events {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.Calendar .day-block {
+  border: 1px solid white;
+  background-color: rgb(222, 143, 167);
+  min-height: 64px;
+  width: 100%;
+  padding: 10px;
+}
+
+.Calendar .event {
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  width: fit-content;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Color variants */
+.Calendar .eventblue {
+  background-color: #6a8cd4;
+}
+
+.Calendar .eventgreen {
+  background-color: #86b96b;
+}
+
+.Calendar .eventyellow {
+  background-color: #f1b95b;
+}
+
+.Calendar .eventpink {
+  background-color: #d74a72;
+}
+
+.Calendar .day-number {
+  text-align: right;
+  font-weight: bold;
+  color: black;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.Calendar .Calendar-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.Calendar .Calendar-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  position: relative;
+  top: -100px;
+  left: -10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.Calendar .Calendar-modal h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.Calendar .Calendar-modal p {
+  margin: 8px 0;
+}
+
+.Calendar .Calendar-modal-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Calendar .going-button,
+.Calendar .cant-come-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Calendar .going-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.Calendar .cant-come-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.Calendar .Calendar-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.Calendar-modal .modal-inside {
+  color: black;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.Calendar-modal h2 {
+  font-size: 16px;
+}
+
+.Calendar .Calendar-rsvp-message {
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 3s ease forwards;
+  font-size: 18px !important;
+  color: white;
+}
+
+.Calendar .Calendar-rsvp-message.success {
+  background-color: #4caf50;
+}
+
+.Calendar .Calendar-rsvp-message.fail {
+  background-color: #f44336;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
