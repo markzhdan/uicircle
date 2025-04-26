@@ -58,7 +58,7 @@ function Profile() {
           <input type="text" placeholder="enter your name"></input>
         </div>
 
-        <div>
+        <div className='individual_label'>
           <label id="year" className="label">Year:</label>
           <select id="dropdown" onChange={handlerYearChange}>  
             <option>select a year</option> 
@@ -79,7 +79,7 @@ function Profile() {
         
         <div className="individual_label">
           <label id="language" className="label">Language:</label>
-          <select id="dropdown" onChange={handlerLanguageChange}>
+          <select id="dropdown" className='language_dropdown' onChange={handlerLanguageChange}>
             <option>select a language</option>   
               {language_selection.map((language) => (
                 <option>{language.label}</option>
@@ -87,15 +87,15 @@ function Profile() {
           </select>
         </div>
 
-        <br></br>
-        <label id="picture">Insert a picture:</label>
-        <br></br>
-        <img id="profile_image" src={profile_pic}></img>
-        <br></br>
-        <Link to="/interests">
-          <button className="profile_button" type="button"><p className='button_text'>→</p></button>
-        </Link>
       </div>
+
+      <label id="picture">Insert a picture:</label>
+      <br></br>
+      <img id="profile_image" src={profile_pic}></img>
+      <br></br>
+      <Link to="/interests">
+        <button className="profile_button" type="button"><p className='button_text'>→</p></button>
+      </Link>
       
     </div>
   );

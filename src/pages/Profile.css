@@ -31,20 +31,20 @@
 }
 
 #profile_image{
-  margin-left: -50px;
+  margin-left: -20px;
   height: 200px;
   width: 200px;
 }
 .title {
-  margin-top: -10px;
   font-weight: bolder;
   font-size: 40px;
   color: white;
   text-shadow: 3px 3px 0 #553f15;
   margin-top: -10px;
+  margin-bottom: 20px;
 }
 
-.label {
+ .label {
   margin-right: 350px;
   font-size: 15px;
   font-weight: bold;
@@ -53,13 +53,35 @@
   
 }
 
-/* #year{
-  margin-right: 360px;
-} */
+#year{
+  margin-right: 350px;
+} 
 
 #major{
   margin-left: 10px;
 }
+
+#language{
+  margin-left: 10px;
+}
+
+.individual_label{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border: none;
+  padding: 10px;
+  width: 350px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: #af7f27;
+  opacity: 50%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+} 
 
 #dropdown{
   margin-right: 40px;
@@ -69,49 +91,32 @@
   background-color: #af7f27;
   opacity: 50%;
   border: none;
-  margin-top: -10px;
-}
-
-select option :hover{
-  background-color: #2c210c;
-  color: white;  
-}
-
-#language{
-  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .inputs {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 #picture {
-  margin-left: -230px;
-  /* margin-right: 350px; */
-  /* font-weight: bold; */
+  margin-right: 20px;
+  font-weight: bold; 
   font-family: "Lucida Console", "Courier New", monospace;
   color:#553f15;
+  font-size: 15px;
+  margin-top: 0%;
 }
 
-input{
-  border: none;
-  padding: 10px;
-  width: 350px;
-  margin-right: 40px;
-  border-radius: 10px;
-  background-color: #af7f27;
-  opacity: 50%;
-  margin-top: -10px;
-
-}
 
 input::placeholder{
   color:#000000
 }
 
-.individual_label{
-  display: flex;
-  flex-direction: column;
+select option :hover{
+  background-color: #2c210c;
+  color: white;  
 }
 
 
