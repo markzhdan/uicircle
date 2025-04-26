@@ -18,6 +18,18 @@
   margin-top: 40px;
 }
 
+.profile_button1 {
+  height: 50px;
+  width: 120px;
+  background-color: #D81159;
+  border-radius: 25px;
+  border-color: #6C0027;
+  border-style: solid;
+  border-width: 5px;
+  justify-content: center;
+  margin-left: 270px;
+}
+
 .button_text{
   font-size: 28px;
   font-weight: bolder;

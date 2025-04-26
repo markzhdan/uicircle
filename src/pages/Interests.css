@@ -6,7 +6,7 @@
     overflow-y: hidden;
   }
   
-  .profile_button {
+  .profile_button2 {
     height: 50px;
     width: 120px;
     background-color: #D81159;
@@ -15,7 +15,25 @@
     border-style: solid;
     border-width: 5px;
     justify-content: center;
-    margin-left: 250px;
+    margin-left: 170px;
+  }
+
+  .profile_button3 {
+    height: 50px;
+    width: 120px;
+    background-color: #D81159;
+    border-radius: 25px;
+    border-color: #6C0027;
+    border-style: solid;
+    border-width: 5px;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  
+  .buttons_div{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
   }
   
   .interest_title {
@@ -24,7 +42,6 @@
     font-size: 50px;
     color: white;
     text-shadow: 3px 3px 0 #553f15;
-    margin-bottom: 15px;
   }
   
   /* --------------------------------------------------------------------------- */
@@ -51,11 +68,11 @@
   }
 
   #pink_row .interest-card {
-    background-color: var(--pink); /* Light Pink */
+    background-color: var(--pink);
   }
   
   #blue_row .interest-card {
-    background-color: var(--aqua-dark); /* Light Blue */
+    background-color: var(--aqua);
   }
   
   .interest-card:hover {
@@ -63,8 +80,8 @@
   }
   
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   
   .interest-label {
@@ -74,15 +91,73 @@
     font-size: 14px;
   }
   .vertical-menu {
+    margin-top: 30px;
     width: 460px;
-    height: 200px;
+    height: 350px;
     overflow-y: auto;
  }
 
 .vertical-menu a {
-    background-color: #eee;
+    background-color: var(--yellow);
     color: black;
     display: block;
     padding: 10px;
     text-decoration: none;
 }
+
+.checkboxes_div {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 70px;
+    align-items: center; /* Vertically align items in the container */
+  }
+  
+  .label_div {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent labels and checkboxes from wrapping */
+    flex-direction: row;
+    align-items: center; /* Vertically align items in the label_div */
+    margin-right: 20px; /* Add some margin to separate the label_divs */
+  }
+  
+  .checkbox_label {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #553f15;
+    margin-left: 8px; /* Add space between checkbox and label */
+  }
+  
+  input[type="checkbox"] {
+    /* Hide the default checkbox */
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    height: 18px; /* Ensure the hidden checkbox takes up space */
+    width: 18px;
+  }
+  
+  /* Create a custom checkbox */
+  .label_div input[type="checkbox"] + .checkbox_label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 2px solid #553f15; /* Dark brown border */
+    margin-right: 8px;
+    vertical-align: middle; /* Vertically align with the label */
+    background-color: transparent; /* Make the background transparent */
+  }
+  
+  /* Style for the checked state */
+  .label_div input[type="checkbox"]:checked + .checkbox_label::before {
+    background-color: #af7f27; /* Medium gold background */
+    border-color: #af7f27; /* Match the border color */
+    /* You can add a checkmark icon here if desired */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 5.97a.733.733 0 0 1-1.047 0L6.16 10.908l-3.475-3.844a.733.733 0 0 1-1.047 1.048l4.006 4.407a.75.75 0 0 0 1.08.02L15.927 7.05a.733.733 0 0 1 0 1.047z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }

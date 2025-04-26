@@ -17,21 +17,24 @@
 // }
 
 // export default App;
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import React from "react";
+import React from 'react';
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import Profile from "./pages/Profile";
 import HomePage from "./pages/HomePage";
 import Messages from "./pages/Messages";
-import Interests from "./pages/Interests";
+import FavClubs from './pages/FavClubs';
+import ClubDetail from './pages/ClubDetail';
+import Interests from './pages/Interests';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import FavClubs from "./pages/FavClubs";
-import ClubDetail from "./pages/ClubDetail";
-import Calendar from "./pages/Calendar";
+
+
+
+
 
 function App() {
   return (
@@ -42,15 +45,16 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/interests" element={<Interests />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/fav-clubs" element={<FavClubs />} />
-            <Route path="/messages" element={<Messages />} />
-            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/messages" element ={<Messages />} />
+            <Route path="/club/:id" element={<ClubDetail />} />
+            <Route path="/interests" element={<Interests />} />
           </Routes>
         </Layout>
       </div>
     </Router>
+
   );
 }
 
