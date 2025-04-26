@@ -272,3 +272,22 @@
     transform: translate(-50%, 0);
   }
 }
+
+.logout {
+  top: 10px;
+  right: 20px;
+  position: absolute;
+  width: 80px;
+  height: 35px;
+  background-color: rgb(228, 156, 143);
+  z-index: 100000;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 800;
+}

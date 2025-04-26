@@ -70,6 +70,10 @@ const HomePage = () => {
         <input type="text" placeholder="Search...." className="SearchInput" />
       </div>
 
+      <NavLink to="/" className="logout">
+        <span>Logout</span>
+      </NavLink>
+
       <div className="card-navigation-wrapper">
         {currentIndex > 0 && (
           <button
