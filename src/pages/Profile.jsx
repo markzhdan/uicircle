@@ -94,7 +94,7 @@ function Profile() {
       <img id="profile_image" src={profile_pic}></img>
       <br></br>
       <Link to="/interests">
-        <button className="profile_button" type="button"><p className='button_text'>→</p></button>
+        <button className="profile_button1" type="button"><p className='button_text'>→</p></button>
       </Link>
       
     </div>

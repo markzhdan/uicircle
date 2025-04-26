@@ -1,274 +1,127 @@
 .club-detail-container {
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 100%;        /* full height of screen */
+  padding: 20px;
+  background-color: var(--yellow);
 }
 
-.top-bar {
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rectangle-17 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(112.66, 119, 98.17, 0.13);
-  border-radius: 10px;
-  border: 1px solid black;
-  z-index: 1;
-}
-
-.favclubs-title {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding-right: 20px;
-  color: white;
-  font-size: 75px;
-  font-family: 'Kadwa', serif;
-  font-weight: 700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 0;
-  z-index: 2;
-}
-
-.club-detail-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 190px;
-  margin-bottom: 190px;
-  height: calc(100vh - 360px);
-  overflow: hidden;
-}
-
-.club-detail-description {
-  font-family: 'Kadwa', serif;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  margin: 0px 0; 
-  padding: 0 0px;
-}
-
-.bottom-nav {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.rectangle-3 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #218380;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-.nav-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 25%;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s, border 0.3s;
-  z-index: 2;
-}
-
-.nav-button img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin-bottom: 0px;
-}
-
-.nav-button span {
-  color: white;
-  font-size: 25px;
-  font-family: 'Kadwa', serif;
-  font-weight: 400;
-  text-align: center;
-}
-
-.nav-button.active {
-  opacity: 1;
-  border-bottom: 3px solid #FFBC42;
-}
-
-/* don't change this */
 .pink-container {
-  position: absolute;
-  width: 85%;  
-  height: 100vh; 
-  top: 50%;    
-  left: 50%;   
-  transform: translate(-50%, -50%); 
-  background: #EE286F;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  margin: 0 auto; 
-  padding: 20px; 
-}
-
-.club-header {
-  position: absolute;
-  top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
-}
-
-.club-title {
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 60px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.club-icon {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
-.separator-line {
-  position: absolute;
-  top: 120px;
-  width: 90%;
-  height: 2px;
-  background-color: white;
-  margin: 15px 0;
-}
-
-.description-container {
-  position: absolute;
-  top: 160px;
-  width: 80%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-family: 'Kadwa', serif;
-  font-weight: 200;
-  line-height: 50px;
-}
-
-.events-section {
-  width: 100%;
-  margin: 15px 0;
-}
-
-.events-title {
-  font-family: 'Kadwa', serif;
-  font-size: 24px;
-  color: white;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.event-pills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.event-pill {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 8px 15px;
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 16px;
-  width: 280px;
-  text-align: center;
-}
-
-
-.members-container {
-  width: 90%;
-  max-height: 120px;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 15px;
-}
-
-.members-container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.members-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.members-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-.members-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.member-item {
-  color: white;
-  font-family: 'Kadwa', serif;
-  font-size: 16px;
-  padding: 5px 0;
-}
-
-.board-member {
-  font-weight: bold;
-  color: #FFBC42;
+  width: 360px;
+  height: 543px;
+  background-color: #f5428d;
+  border-radius: 35px;
+  padding: 16px;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: black;
+  border-style: solid;
+  margin-bottom: 100px;
 }
 
 .back-icon {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
   cursor: pointer;
-  background: #218380;
-  border-radius: 50%;
-  padding: 15px;
-  transition: transform 0.2s;
-  z-index: 3;
+  position: absolute; /* <-- ADD THIS */
+  top: 15px;           /* <-- Push a little from top */
+  left: 15px;
 }
 
-.back-icon:hover {
-  transform: scale(1.1);
+.club-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.club-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.club-icon1 {
+  width: 40px;
+  height: 40px;
+}
+
+.separator-line {
+  height: 2px;
+  background-color: white;
+  margin: 12px 0;
+}
+
+.club-detail-description {
+  font-size: 18px;
+  text-align: center;
+}
+
+.section-title {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.event-card {
+  background-color: #f8b7c1;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.event-date {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.event-name {
+  margin-top: 20px;
+  background-color: #ec6788;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.members {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member {
+  background-color: #f8b7c1;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.member-icon {
+  margin-right: 8px;
+}
+
+.message-icon {
+  font-size: 24px; /* or any size you want */
+  cursor: pointer;
 }
